@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosch Product Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 50px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .logo {
+            width: 150px;
+        }
+        h1 {
+            color: #333;
+        }
+        .search-bar {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 16px;
+            background-color: #0071c5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\BRI2BAN\Downloads\NBP\Bosch_symbol_logo_black_red_EN.png" class="logo" alt="Bosch Logo">
+    </div>
+    <h1>Find Your Bosch Product</h1>
+    <form action="/product" method="POST" class="search-bar">
+        <input type="text" name="product_id" placeholder="Enter Product ID" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

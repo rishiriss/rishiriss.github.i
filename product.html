@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 50px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .logo {
+            width: 150px;
+        }
+        .product-details {
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+        }
+        .rating {
+            font-size: 18px;
+            color: #777;
+        }
+        .product-img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+        .recommended-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .recommended-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .recommended-item {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .recommended-item img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\BRI2BAN\Downloads\NBP\Bosch_symbol_logo_black_red_EN.png" class="logo" alt="Bosch Logo">
+    </div>
+    <div class="product-details">
+        <h1>{{ product['Product Name'] }}</h1>
+        <p class="rating">Rating: {{ product['Avg. Rating'] }}</p>
+        <img src="{{ product['Image URL'] }}" class="product-img" alt="{{ product['Product Name'] }}">
+    </div>
+    
+    <div class="recommended-section">
+        <h2>Recommended Products</h2>
+        <div class="recommended-grid">
+            {% for item in product['recommended'] %}
+            <div class="recommended-item">
+                <img src="{{ item['Image URL'] }}" alt="{{ item['Product Name'] }}">
+                <p><strong>{{ item['Product Name'] }}</strong></p>
+                <p>Rating: {{ item['Avg. Rating'] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
