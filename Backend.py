@@ -4,7 +4,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load dataset
-file_path = 'bosch_item_based_collaborative_filtering.csv'
+file_path = 'bosch_item_based_collaborative_filteringg.csv'
 df = pd.read_csv(file_path)
 
 # Normalize the features
